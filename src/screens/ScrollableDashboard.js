@@ -7,6 +7,7 @@ import {
   StatusBar,
   Platform,
   TouchableOpacity,
+  ScrollView,
 } from "react-native";
 import ProfileImage from "../components/ProfileImage";
 
@@ -16,7 +17,7 @@ import NewReleaseCard from "../components/NewReleaseCard";
 import ContinueWatchingCard from "../components/ContinueWatchingCard";
 import MovieCard from "../components/MovieCard";
 
-export default function Dashboard() {
+export default function ScrollableDashboard() {
   return (
     <SafeAreaView style={styles.container}>
       {/* Header Section */}
@@ -40,23 +41,25 @@ export default function Dashboard() {
         </View>
       </View>
 
-      {/* New Release */}
-      <View>
-        <Text style={styles.newReleaseText}>New Release</Text>
-        <NewReleaseCard />
-      </View>
+      <ScrollView showsVerticalScrollIndicator={false}>
+        {/* New Release */}
+        <View>
+          <Text style={styles.newReleaseText}>New Release</Text>
+          <NewReleaseCard />
+        </View>
 
-      {/* New Release */}
-      <View>
-        <Text style={styles.newReleaseText}>Continue Watching</Text>
-        <ContinueWatchingCard />
-      </View>
+        {/* Continue Watching */}
+        <View>
+          <Text style={styles.newReleaseText}>Continue Watching</Text>
+          <ContinueWatchingCard />
+        </View>
 
-      {/* New Release */}
-      <View>
-        <Text style={styles.newReleaseText}>Continue Watching</Text>
-        <MovieCard />
-      </View>
+        {/* Movies */}
+        <View>
+          <Text style={styles.newReleaseText}>Movies</Text>
+          <MovieCard />
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }
@@ -68,7 +71,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#18181B",
     paddingHorizontal: 20,
   },
-  headerSection: { flexDirection: "row" },
+  headerSection: { flexDirection: "row", paddingBottom: 5 },
   headerImageSection: { justifyContent: "center" },
   headerTextSection: {
     flexGrow: 1,

@@ -2,6 +2,7 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import Dashboard from "./src/screens/Dashboard";
 import Onboarding from "./src/screens/Onboarding";
+import ScrollableDashboard from "./src/screens/ScrollableDashboard";
 
 export default function App() {
   return (
@@ -10,7 +11,8 @@ export default function App() {
     //   <StatusBar style="auto" />
     // </View>
     // <Onboarding />
-    <Dashboard />
+    // <Dashboard />
+    <ScrollableDashboard />
   );
 }
 
