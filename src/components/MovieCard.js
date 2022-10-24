@@ -1,19 +1,21 @@
 import { Image, ImageBackground, StyleSheet, Text, View } from "react-native";
 import { Rating } from "react-native-ratings";
 
-export default function MovieCard() {
+export default function MovieCard({ image, text, subtext }) {
   return (
     <View style={styles.container}>
       <Image
         resizeMode="cover"
         style={styles.imageBackground}
         blurRadius={1.5}
-        source={require("./../../assets/images/avengers.jpg")}
-      ></Image>
+        source={image}
+      />
       <View style={styles.textContainer}>
         <View style={styles.textSection}>
-          <Text style={styles.title}>Grappler Baki</Text>
-          <Text style={styles.subtitle}>T.1 Episode 4</Text>
+          <Text style={styles.title} numberOfLines={1}>
+            {text}
+          </Text>
+          <Text style={styles.subtitle}>{subtext}</Text>
         </View>
       </View>
     </View>
@@ -26,6 +28,7 @@ const styles = StyleSheet.create({
     // borderRadius: 25,
     marginTop: 10,
     width: 200,
+    marginRight: 10,
   },
   imageBackground: {
     height: 170,

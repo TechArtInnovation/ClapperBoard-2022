@@ -20,28 +20,28 @@ import MovieCard from "../components/MovieCard";
 export default function ScrollableDashboard() {
   return (
     <SafeAreaView style={styles.container}>
-      {/* Header Section */}
-      <View style={styles.headerSection}>
-        {/* Profile Image */}
-        <View style={styles.headerImageSection}>
-          <ProfileImage />
-        </View>
-
-        {/* Text Section */}
-        <View style={styles.headerTextSection}>
-          <Text style={styles.headerTitle}>Welcome back</Text>
-          <Text style={styles.headerSubTitle}>Maria</Text>
-        </View>
-
-        {/* Button Section */}
-        <View style={styles.headerBtnSection}>
-          <TouchableOpacity>
-            <MaterialIcons name="dehaze" size={30} color="white" />
-          </TouchableOpacity>
-        </View>
-      </View>
-
       <ScrollView showsVerticalScrollIndicator={false}>
+        {/* Header Section */}
+        <View style={styles.headerSection}>
+          {/* Profile Image */}
+          <View style={styles.headerImageSection}>
+            <ProfileImage />
+          </View>
+
+          {/* Text Section */}
+          <View style={styles.headerTextSection}>
+            <Text style={styles.headerTitle}>Welcome back</Text>
+            <Text style={styles.headerSubTitle}>Maria</Text>
+          </View>
+
+          {/* Button Section */}
+          <View style={styles.headerBtnSection}>
+            <TouchableOpacity>
+              <MaterialIcons name="dehaze" size={30} color="white" />
+            </TouchableOpacity>
+          </View>
+        </View>
+
         {/* New Release */}
         <View>
           <Text style={styles.newReleaseText}>New Release</Text>
@@ -57,7 +57,16 @@ export default function ScrollableDashboard() {
         {/* Movies */}
         <View>
           <Text style={styles.newReleaseText}>Movies</Text>
-          <MovieCard />
+          <MovieCard
+            text="One Punch Man"
+            subtext="T.1  Episode 4"
+            image={require("./../../assets/images/endgame.jpg")}
+          />
+          <MovieCard
+            image={require("./../../assets/images/blackpanther.jpg")}
+            text="Legends of the seeker season 1 episode 100 79 and title"
+            subtext="T.1  Episode 4"
+          />
         </View>
       </ScrollView>
     </SafeAreaView>

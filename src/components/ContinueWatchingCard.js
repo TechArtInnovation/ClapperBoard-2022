@@ -26,6 +26,7 @@ const styles = StyleSheet.create({
     // borderRadius: 25,
     marginTop: 10,
     width: 200,
+    marginRight: 10,
   },
   imageBackground: {
     height: 140,
