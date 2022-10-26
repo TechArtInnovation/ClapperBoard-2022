@@ -4,6 +4,8 @@ import Dashboard from "./src/screens/Dashboard";
 import Onboarding from "./src/screens/Onboarding";
 import ScrollableDashboard from "./src/screens/ScrollableDashboard";
 import UsingFlatList from "./src/testing/UsingFlatList";
+import UsingFlatList2 from "./src/testing/UsingFlatList2";
+import UsingFlatList3 from "./src/testing/UsingFlatList3";
 
 export default function App() {
   return (
@@ -15,6 +17,8 @@ export default function App() {
     // <Dashboard />
     // <ScrollableDashboard />
     <UsingFlatList />
+    // <UsingFlatList2 />
+    // <UsingFlatList3 />
   );
 }
 
