@@ -2,7 +2,6 @@ import { useState } from "react";
 import { Image, StyleSheet, Text, TextInput, View } from "react-native";
 import GradientButton from "../components/GradientButton";
 import GradientInput from "../components/GradientInput";
-
 export default function SearchPage() {
   // creating a use state variable
   const [searchValue, setSearchValue] = useState("Zero");

@@ -3,7 +3,7 @@ import { Image, StyleSheet, Text, View } from "react-native";
 import CustomButton from "../components/CustomButton";
 import GradientButton from "../components/GradientButton";
 
-export default function Onboarding() {
+export default function Onboarding({ navigation }) {
   return (
     <View style={styles.container}>
       <Image
@@ -21,7 +21,10 @@ export default function Onboarding() {
       {/* Calling the custom button */}
       {/* <CustomButton text="Enter now" onPress={() => console.log("blue")} /> */}
       {/* <CustomButton text="Login" /> */}
-      <GradientButton text="Enter now" />
+      <GradientButton
+        text="Enter now"
+        onPress={() => navigation.navigate("Dashboard")}
+      />
     </View>
   );
 }

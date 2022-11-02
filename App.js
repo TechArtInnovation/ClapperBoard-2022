@@ -1,26 +1,25 @@
-import { StatusBar } from "expo-status-bar";
+import { NavigationContainer } from "@react-navigation/native";
 import { StyleSheet, Text, View } from "react-native";
-import Dashboard from "./src/screens/Dashboard";
+
+// creating the stack navigator object
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+const Stack = createNativeStackNavigator();
+
 import Onboarding from "./src/screens/Onboarding";
-import ScrollableDashboard from "./src/screens/ScrollableDashboard";
-import SearchPage from "./src/screens/SearchPage";
-import UsingFlatList from "./src/testing/UsingFlatList";
-import UsingFlatList2 from "./src/testing/UsingFlatList2";
-import UsingFlatList3 from "./src/testing/UsingFlatList3";
+import Dashboard from "./src/screens/Dashboard";
+import { useState } from "react";
 
 export default function App() {
   return (
-    // <View style={styles.container}>
-    //   <Text>Open up App.js to start working on your app!</Text>
-    //   <StatusBar style="auto" />
-    // </View>
-    // <Onboarding />
-    // <Dashboard />
-    // <ScrollableDashboard />
-    // <UsingFlatList />
-    // <UsingFlatList2 />
-    // <UsingFlatList3 />
-    <SearchPage />
+    <NavigationContainer>
+      <Stack.Navigator
+        initialRouteName="Onboarding"
+        screenOptions={{ headerShown: false }}
+      >
+        <Stack.Screen name="Onboarding" component={Onboarding} />
+        <Stack.Screen name="Dashboard" component={Dashboard} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
 
